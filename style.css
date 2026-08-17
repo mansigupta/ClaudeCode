@@ -23,54 +23,11 @@ body {
   line-height: 1.75;
 }
 
-/* Navigation */
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.4rem 4rem;
-  border-bottom: 1px solid var(--border);
-  position: sticky;
-  top: 0;
-  background: var(--bg);
-  z-index: 10;
-}
-
-.nav-logo {
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
-  font-size: 0.9rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--navy);
-  text-decoration: none;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 2.5rem;
-}
-
-nav ul a {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.78rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--text);
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-nav ul a:hover {
-  color: var(--navy);
-}
-
 /* Hero */
 .hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  min-height: calc(100vh - 62px);
+  min-height: 100vh;
 }
 
 .hero-photo {
@@ -84,22 +41,6 @@ nav ul a:hover {
   object-fit: cover;
   object-position: center top;
   display: block;
-}
-
-.hero-photo.placeholder::after {
-  content: 'Photo coming soon';
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  color: #999;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.85rem;
-  letter-spacing: 0.08em;
-}
-
-.hero-photo.placeholder img {
-  display: none;
 }
 
 .hero-text {
@@ -203,10 +144,6 @@ footer {
 
   h1 {
     font-size: 2.6rem;
-  }
-
-  nav {
-    padding: 1.2rem 2rem;
   }
 
   .speaking {
