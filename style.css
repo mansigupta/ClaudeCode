@@ -5,11 +5,13 @@
 }
 
 :root {
-  --amber:  #c4621a;
-  --text:   #2d2d2d;
-  --muted:  #888;
-  --bg:     #ffffff;
-  --border: #ddd;
+  --amber:    #c4621a;
+  --cobalt:   #0047AB;
+  --text:     #2d2d2d;
+  --muted:    #888;
+  --bg:       #ffffff;
+  --border:   #ddd;
+  --side-pad: 15%;
 }
 
 html { scroll-behavior: smooth; }
@@ -26,7 +28,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 4rem;
+  padding: 2rem var(--side-pad);
 }
 
 .nav-name {
@@ -35,7 +37,7 @@ nav {
   font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--amber);
+  color: var(--cobalt);
   text-decoration: none;
 }
 
@@ -62,7 +64,7 @@ nav ul a:hover { color: var(--text); }
   display: grid;
   grid-template-columns: 58% 42%;
   min-height: calc(100vh - 80px);
-  padding: 0 4rem 4rem;
+  padding: 0 var(--side-pad) 4rem;
   gap: 4rem;
   align-items: start;
 }
@@ -118,7 +120,7 @@ h1 {
   display: block;
 }
 
-/* Section rule — sits inside sections that already have 4rem side padding */
+/* Section rule */
 .section-rule {
   border: none;
   border-top: 1px solid var(--border);
@@ -127,7 +129,7 @@ h1 {
 
 /* Work section */
 .work {
-  padding: 0 4rem 4rem;
+  padding: 0 var(--side-pad) 4rem;
 }
 
 .section-heading {
@@ -189,7 +191,7 @@ h1 {
 
 /* Speaking section */
 .speaking {
-  padding: 0 4rem 4rem;
+  padding: 0 var(--side-pad) 4rem;
 }
 
 .speaking-grid {
@@ -223,7 +225,7 @@ h1 {
 /* Footer */
 footer {
   border-top: 1px solid var(--border);
-  padding: 1.5rem 4rem;
+  padding: 1.5rem var(--side-pad);
   font-family: 'Inter', sans-serif;
   font-size: 0.75rem;
   color: var(--muted);
@@ -232,11 +234,13 @@ footer {
 
 /* Responsive */
 @media (max-width: 900px) {
-  nav { padding: 1.5rem 2rem; }
+  :root { --side-pad: 6%; }
+
+  nav { padding: 1.5rem var(--side-pad); }
 
   .hero {
     grid-template-columns: 1fr;
-    padding: 0 2rem 3rem;
+    padding: 0 var(--side-pad) 3rem;
     gap: 2.5rem;
     min-height: auto;
   }
@@ -244,8 +248,8 @@ footer {
   .hero-photo { position: static; order: -1; }
   h1 { font-size: 1.8rem; }
 
-  .work, .speaking { padding: 0 2rem 3rem; }
+  .work, .speaking { padding: 0 var(--side-pad) 3rem; }
   .work-grid { grid-template-columns: 1fr; }
   .speaking-grid { grid-template-columns: 1fr; }
-  footer { padding: 1.2rem 2rem; }
+  footer { padding: 1.2rem var(--side-pad); }
 }
