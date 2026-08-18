@@ -118,16 +118,16 @@ h1 {
   display: block;
 }
 
-/* Section rule */
+/* Section rule — sits inside sections that already have 4rem side padding */
 .section-rule {
   border: none;
   border-top: 1px solid var(--border);
-  margin: 0 4rem;
+  margin: 0;
 }
 
 /* Work section */
 .work {
-  padding: 4rem 4rem;
+  padding: 0 4rem 4rem;
 }
 
 .section-heading {
@@ -135,6 +135,7 @@ h1 {
   font-size: clamp(1.2rem, 2vw, 1.6rem);
   font-weight: 400;
   color: var(--amber);
+  margin-top: 2.5rem;
   margin-bottom: 3rem;
 }
 
@@ -188,7 +189,7 @@ h1 {
 
 /* Speaking section */
 .speaking {
-  padding: 4rem 4rem;
+  padding: 0 4rem 4rem;
 }
 
 .speaking-grid {
@@ -196,12 +197,19 @@ h1 {
   grid-template-columns: 2fr 2fr 2fr;
   gap: 3rem;
   align-items: start;
+  margin-top: 2.5rem;
 }
 
 .speaking-photo-placeholder {
   width: 100%;
   aspect-ratio: 1/1;
   background: #e8e8e8;
+}
+
+/* In the speaking section the label is the first element — no border needed */
+.speaking-col .highlights-label {
+  border-top: none;
+  padding-top: 0;
 }
 
 .speaking-list {
@@ -236,8 +244,7 @@ footer {
   .hero-photo { position: static; order: -1; }
   h1 { font-size: 1.8rem; }
 
-  .section-rule { margin: 0 2rem; }
-  .work, .speaking { padding: 3rem 2rem; }
+  .work, .speaking { padding: 0 2rem 3rem; }
   .work-grid { grid-template-columns: 1fr; }
   .speaking-grid { grid-template-columns: 1fr; }
   footer { padding: 1.2rem 2rem; }
