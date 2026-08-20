@@ -19,21 +19,15 @@ html { scroll-behavior: smooth; }
 body {
   font-family: 'DM Sans', sans-serif;
   font-size: 0.9rem;
-  background: var(--bg);
-  color: var(--text);
+  background: #ffffff;
+  color: #2d2d2d;
   line-height: 1.7;
 }
 
-/* Global link style — covers all states including visited */
-a,
-a:visited {
-  color: var(--cobalt);
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
+/* All links: cobalt, no underline by default, underline on hover */
+a         { color: #0047AB; text-decoration: none; }
+a:visited { color: #0047AB; text-decoration: none; }
+a:hover   { color: #0047AB; text-decoration: underline; text-underline-offset: 2px; }
 
 /* Nav */
 nav {
@@ -48,11 +42,12 @@ nav {
   font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--cobalt);
+  color: #0047AB;
   text-decoration: none;
 }
 
-.nav-name:hover { text-decoration: none; }
+.nav-name:hover,
+.nav-name:visited { color: #0047AB; text-decoration: none; }
 
 nav ul {
   list-style: none;
@@ -60,11 +55,13 @@ nav ul {
   gap: 2rem;
 }
 
-nav ul a {
+nav ul a,
+nav ul a:visited {
   font-size: 0.78rem;
   font-weight: 400;
   letter-spacing: 0.08em;
-  transition: opacity 0.2s;
+  color: #0047AB;
+  text-decoration: none;
 }
 
 nav ul a:hover {
@@ -89,7 +86,7 @@ nav ul a:hover {
   font-weight: 400;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: #888;
   margin-bottom: 1.2rem;
 }
 
@@ -98,14 +95,14 @@ h1 {
   font-size: clamp(1.8rem, 2.8vw, 2.8rem);
   font-weight: 300;
   line-height: 1.25;
-  color: var(--text);
+  color: #2d2d2d;
   margin-bottom: 1.8rem;
   letter-spacing: 0.01em;
 }
 
 .separator {
   border: none;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid #ddd;
   margin-bottom: 1.8rem;
 }
 
@@ -117,7 +114,7 @@ h1 {
 
 .bio p:last-child { margin-bottom: 0; }
 
-.bio strong { font-weight: 600; color: var(--text); }
+.bio strong { font-weight: 600; color: #2d2d2d; }
 
 .hero-photo {
   position: sticky;
@@ -133,7 +130,7 @@ h1 {
 /* Section rule */
 .section-rule {
   border: none;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid #ddd;
   margin: 0;
 }
 
@@ -146,7 +143,7 @@ h1 {
   font-family: 'Cormorant Garamond', Georgia, serif;
   font-size: clamp(1.2rem, 2vw, 1.6rem);
   font-weight: 400;
-  color: var(--amber);
+  color: #c4621a;
   margin-top: 2.5rem;
   margin-bottom: 3rem;
 }
@@ -168,7 +165,7 @@ h1 {
   font-family: 'Cormorant Garamond', Georgia, serif;
   font-size: 1.25rem;
   font-weight: 400;
-  color: var(--amber);
+  color: #c4621a;
   margin-bottom: 0.8rem;
   line-height: 1.4;
 }
@@ -184,10 +181,10 @@ h1 {
   font-weight: 600;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--text);
+  color: #2d2d2d;
   margin-bottom: 0.8rem;
   padding-top: 1.2rem;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid #ddd;
 }
 
 .highlights {
@@ -230,10 +227,10 @@ h1 {
 
 /* Footer */
 footer {
-  border-top: 1px solid var(--border);
+  border-top: 1px solid #ddd;
   padding: 1.5rem var(--side-pad);
   font-size: 0.72rem;
-  color: var(--muted);
+  color: #888;
   letter-spacing: 0.06em;
 }
 
