@@ -105,7 +105,7 @@ h1 {
 
 .bio p:last-child { margin-bottom: 0; }
 
-.bio a { color: var(--amber); text-decoration: none; }
+.bio a { color: var(--cobalt); text-decoration: none; }
 .bio a:hover { text-decoration: underline; text-underline-offset: 2px; }
 .bio strong { font-weight: 500; color: var(--text); }
 
