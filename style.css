@@ -23,6 +23,16 @@ body {
   line-height: 1.7;
 }
 
+/* Global link style */
+a {
+  color: var(--cobalt);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 /* Nav */
 nav {
   display: flex;
@@ -41,6 +51,10 @@ nav {
   text-decoration: none;
 }
 
+.nav-name:hover {
+  text-decoration: none;
+}
+
 nav ul {
   list-style: none;
   display: flex;
@@ -52,12 +66,10 @@ nav ul a {
   font-size: 0.78rem;
   font-weight: 400;
   letter-spacing: 0.08em;
-  color: var(--muted);
-  text-decoration: none;
-  transition: color 0.2s;
+  transition: opacity 0.2s;
 }
 
-nav ul a:hover { color: var(--text); }
+nav ul a:hover { opacity: 0.7; }
 
 /* Hero */
 .hero {
@@ -105,8 +117,6 @@ h1 {
 
 .bio p:last-child { margin-bottom: 0; }
 
-.bio a { color: var(--cobalt); text-decoration: none; }
-.bio a:hover { text-decoration: underline; text-underline-offset: 2px; }
 .bio strong { font-weight: 500; color: var(--text); }
 
 .hero-photo {
