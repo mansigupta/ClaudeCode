@@ -201,7 +201,7 @@ h1 {
 
 .speaking-grid {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 3rem;
   align-items: start;
   margin-top: 2.5rem;
@@ -216,12 +216,6 @@ h1 {
 .speaking-col .highlights-label {
   border-top: none;
   padding-top: 0;
-}
-
-.speaking-label-second {
-  margin-top: 1.8rem;
-  border-top: 1px solid #ddd !important;
-  padding-top: 1.2rem !important;
 }
 
 .speaking-list {
